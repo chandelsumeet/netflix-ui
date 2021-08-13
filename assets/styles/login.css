@@ -1,0 +1,79 @@
+/* Global Styles */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #e50914;
+  --secondary-color: #222;
+  --bg-color: #000;
+  --primary-white: #fff;
+  --primary-text-color: #fff;
+}
+
+body {
+  font-family: "Martel Sans", sans-serif;
+  color: white;
+}
+a {
+  text-decoration: none;
+}
+button,
+input {
+  border: none;
+  outline: none;
+}
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.font-w700 {
+  font-weight: 700;
+}
+
+.btn {
+  padding: 0.3rem 0.5rem;
+  font-size: 0.9rem;
+  border-radius: 3px;
+  color: var(--primary-text-color);
+  background-color: var(--primary-color);
+}
+
+.primary-text {
+  color: var(--primary-white);
+}
+.container {
+  background: var(--bg-color);
+}
+
+/*  //////////////////// Header Start ////////////////////////// */
+.logo svg {
+  fill: var(--primary-color);
+  width: 90px;
+}
+header {
+  padding: 1rem 5%;
+}
+
+/*  //////////////////// Header End ////////////////////////// */
+
+/* ///////////////////// Sign In Section Start ////////////// */
+
+.sign-in {
+  padding: 0 1rem;
+}
+h1 {
+  font-size: 2rem;
+}
+/* ///////////////////// Sign In Section Ends ////////////// */

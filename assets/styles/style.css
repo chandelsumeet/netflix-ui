@@ -31,113 +31,180 @@ img {
   width: 100%;
   height: auto;
 }
-.btn {
-  padding: 0.5rem 1rem;
+
+p {
+  margin-bottom: 1rem;
   font-size: 1rem;
+}
+
+.font-w700 {
+  font-weight: 700;
+}
+
+.btn {
+  padding: 0.3rem 0.5rem;
+  font-size: 0.9rem;
   border-radius: 3px;
   color: var(--primary-text-color);
   background-color: var(--primary-color);
 }
-h1 {
-  font-size: 3.5rem;
-}
-.primary-text {
-  color: var(--primary-text-color);
-}
 
+.primary-text {
+  color: var(--primary-white);
+}
 .container {
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)),
-    url("../images/netflix-bg-img.jpg");
-  width: 100%;
-  height: 100vh;
+    url("../images/netflix-bg-img.jpg") center/cover;
+  height: 80vh;
 }
 
-/* ///////////////////////////// Header Start ///////////////////////////// */
+/* ///////////////////////////Header Start/////////////////////////// */
+
 .logo svg {
   fill: var(--primary-color);
-  width: 130px;
+  width: 90px;
 }
 header {
   display: flex;
   justify-content: space-between;
-  padding: 1rem 3.5rem;
   align-items: center;
+  padding: 1.6rem 5%;
 }
 nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
 }
+
 #lang-select {
-  border: 1px solid var(--primary-white);
-  padding: 0.5rem;
-  border-radius: 2px;
-  color: #fff;
+  padding: 0.3rem;
+  border-radius: 3px;
+  color: var(--primary-text-color);
   background: rgba(0, 0, 0, 0.4);
 }
-.nav::before {
-  content: "51515";
-  color: white;
-  height: 20px;
-  width: 20px;
-  display: block;
-}
-/* ////////////////////////// Header End ///////////////////////////// */
-
-/* ////////////////////////// Hero Section Start ///////////////////////////// */
-
 .hero-section {
   display: grid;
-  place-items: center;
-  height: 600px;
+  justify-content: center;
+  height: 300px;
+  padding: 1rem 0.6rem 3rem;
 }
+
 .hero-area {
   text-align: center;
-  max-width: 690px;
 }
 .main-title {
-  line-height: 1.2;
+  font-size: 1.5rem;
   font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
 }
 .get-started-container {
   display: grid;
-  grid-template-columns: 2.5fr 1fr;
-  align-content: center;
-  border-radius: 3px;
-  margin-top: 1rem;
+  grid-template-rows: auto auto;
+  row-gap: 1rem;
+  max-width: 950px;
 }
 .input-container {
-  position: relative;
+  display: grid;
+  height: 45px;
   background: var(--primary-white);
-  height: 70px;
-  display: grid;
-  align-content: center;
-  padding: 0.3rem;
-  border-radius: 2px 0 0 2px;
+  border-radius: 3px;
+  width: 100%;
+  place-items: center;
+  max-width: 500px;
+  justify-self: center;
 }
-.input-label {
-  color: #7a7373;
-  padding: 0.3rem;
-  position: absolute;
-  transform: translateY(40%);
-  transition: all 0.5ms linear;
-  font-size: 1rem;
+.input-container input {
+  display: block;
+  width: 100%;
 }
-input:focus + label {
-  font-size: 0.8rem;
-  transform: translateY(-18%);
-}
-.get-started-link {
-  display: inline-block;
-  background: var(--primary-color);
-  color: var(--primary-text-color);
-  display: grid;
-  align-content: center;
-  border-radius: 0 2px 2px 0;
-  font-size: 1.5rem;
-  padding: 0.5rem;
-  font-weight: 700;
+label {
+  display: none;
 }
 
-/* ////////////////////////// Hero Section End ///////////////////////////// */
+.get-started-link {
+  display: flex;
+  background: var(--primary-color);
+  width: fit-content;
+  padding: 0.4rem 0.9rem;
+  border-radius: 3px;
+  justify-self: center;
+}
+
+@media screen and (min-width: 553px) and (max-width: 960px) {
+  .container {
+    height: 100%;
+  }
+  .hero-section {
+    height: 100%;
+    padding: 8rem 10%;
+  }
+  .main-title {
+    font-size: 2.8rem;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+  .logo svg {
+    width: 110px;
+  }
+  .btn {
+    padding: 0.5rem 0.9rem;
+    font-size: 1rem;
+  }
+  #lang-select {
+    padding: 0.5rem 0.8rem;
+  }
+}
+
+@media screen and (min-width: 961px) {
+  .container {
+    height: 100vh;
+  }
+  .hero-section {
+    height: 100%;
+    padding: 8rem 10%;
+  }
+  .hero-area {
+    max-width: 800px;
+  }
+  .get-started-link {
+    width: 100%;
+    border-radius: 0 3px 3px 0;
+    align-items: center;
+    justify-content: center;
+  }
+  .input-container {
+    border-radius: 3px 0 0 3px;
+    height: 60px;
+    max-width: 100%;
+  }
+  .get-started-container {
+    grid-template-columns: 2.5fr 1fr;
+    justify-content: center;
+    grid-template-rows: auto;
+    row-gap: 0;
+    border-radius: 3px;
+    max-width: 600px;
+    margin: auto;
+  }
+  .main-title {
+    font-size: 3.5rem;
+  }
+  p {
+    font-size: 1.5rem;
+    padding: 0 1.5rem;
+  }
+  .logo svg {
+    width: 170px;
+  }
+  .btn {
+    padding: 0.5rem 0.9rem;
+    font-size: 1rem;
+  }
+  #lang-select {
+    padding: 0.5rem 0.8rem;
+  }
+}
+/* ///////////////////////////Header End/////////////////////////// */
